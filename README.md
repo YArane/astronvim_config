@@ -1,10 +1,10 @@
-# Astronvim Config
+# AstroNvim Config
 My AstroNvim Config
 
 ## Features
 * All features from astronvim: https://github.com/AstroNvim/AstroNvim#-features.
 * Added support for rust-tools: https://github.com/simrat39/rust-tools.nvim.
-* Vimwiki: https://github.com/vimwiki/vimwiki.
+* Vimwiki with calendar support: https://github.com/vimwiki/vimwiki.
 * Custom `nvim-cmp` ordering.
 
 ## Preview
@@ -20,23 +20,21 @@ My AstroNvim Config
 
 You can config `AstroNvim` in both `.config/nvim/lua/user` or `.config/astronvim/lua/user`.
 
-I recommend doing the second method for easily reinstallation.
-
 ```bash
   git clone https://github.com/YArane/astronvim_config ~/.config/astronvim/lua/user
   nvim +PackerSync
 ```
-## Basic Setup
-
-#### Install LSP
-`:LspInstall rust`
-
-`:LspInstall lua`
-
-#### Install language parser
-`:TSInstall rust`
-
-`:TSInstall lua`
-
-#### Install Debugger
-`:DapInstall codelldb`
+#### Install language server protocols
+```vim
+:LspInstall rust
+:LspInstall lua
+```
+#### Install language parsers
+```vim
+:TSInstall rust
+:TSInstall lua
+```
+#### Install debugger
+```vim
+:DapInstall codelldb
+```
