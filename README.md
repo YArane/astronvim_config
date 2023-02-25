@@ -4,7 +4,7 @@ My AstroNvim Config
 ## Features
 * All features from astronvim: https://github.com/AstroNvim/AstroNvim#-features.
 * Added support for rust-tools: https://github.com/simrat39/rust-tools.nvim.
-* Vimwiki with calendar support: https://github.com/vimwiki/vimwiki.
+* Vimwiki with calendar integration: https://github.com/vimwiki/vimwiki.
 * Custom `nvim-cmp` ordering.
 
 ## Preview
@@ -37,4 +37,8 @@ You can config `AstroNvim` in both `.config/nvim/lua/user` or `.config/astronvim
 #### Install debugger
 ```vim
 :DapInstall codelldb
+```
+#### Install formatter
+```vim
+:NullLsInstall rustfmt
 ```
