@@ -23,40 +23,41 @@ end
 local label_comparator = function(entry1, entry2)
   return entry1.completion_item.label < entry2.completion_item.label
 end
-
-require("cmp").setup {
-  sorting = {
-    comparators = {
-      lspkind_comparator({
-        kind_priority = {
-          Field = 11,
-          Property = 11,
-          Constant = 10,
-          Enum = 10,
-          EnumMember = 10,
-          Event = 10,
-          Function = 10,
-          Method = 10,
-          Operator = 10,
-          Reference = 10,
-          Struct = 10,
-          Variable = 9,
-          File = 8,
-          Folder = 8,
-          Class = 5,
-          Color = 5,
-          Module = 5,
-          Keyword = 2,
-          Constructor = 1,
-          Interface = 1,
-          Snippet = 0,
-          Text = 1,
-          TypeParameter = 1,
-          Unit = 1,
-          Value = 1,
-        },
-      }),
-      label_comparator,
+return {
+  require("cmp").setup {
+    sorting = {
+      comparators = {
+        lspkind_comparator({
+          kind_priority = {
+            Field = 11,
+            Property = 11,
+            Constant = 10,
+            Enum = 10,
+            EnumMember = 10,
+            Event = 10,
+            Function = 10,
+            Method = 10,
+            Operator = 10,
+            Reference = 10,
+            Struct = 10,
+            Variable = 9,
+            File = 8,
+            Folder = 8,
+            Class = 5,
+            Color = 5,
+            Module = 5,
+            Keyword = 2,
+            Constructor = 1,
+            Interface = 1,
+            Snippet = 0,
+            Text = 1,
+            TypeParameter = 1,
+            Unit = 1,
+            Value = 1,
+          },
+        }),
+        label_comparator,
+      }
     }
   }
 }
